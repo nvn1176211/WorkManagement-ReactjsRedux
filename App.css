@@ -1,0 +1,22 @@
+.w-30{
+  width: 30px;
+}
+.fs-p{
+  font-size: 95%;
+  width: 80px;
+}
+.fs-p1{
+  font-size: 95%;
+  width: 80px;
+}
+.cp{
+	cursor: pointer;
+}
+.sort_selected:after{
+	content: '\f00c';
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0 0 0 10px;
+	display: inline-block;
+}
