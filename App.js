@@ -10,14 +10,14 @@ import * as actions from './actions/index';
 class App extends Component {
 
   toggleForm = () => {
-    if(this.props.taskEditing && this.props.displayForm){
+    if(this.props.taskEditing.name !== '' && this.props.displayForm){
       this.props.editTask({
         id: '',
         name: '',
         status: false
       });
     }else{
-     this.props.toggleForm();
+     this.props.onToggleForm();
     }
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
 
     return (
       <div className="container mt-3">
-        <h1 className="text-center">Time Management</h1>
+        <h1 className="text-center">Work Management</h1>
         <div className="row mt-5">
           <div className={ displayForm ? "col-sm-4" : ""}>
             <TaskForm />
@@ -59,7 +59,7 @@ const mapStateToProps = state => {
 
 const mapDispactToProps = (dispact, action) => {
   return {
-    toggleForm: () => {
+    onToggleForm: () => {
       dispact(actions.toggleForm());
     },
     editTask: (task) => {
